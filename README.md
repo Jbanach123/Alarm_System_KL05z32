@@ -7,8 +7,6 @@ The system can be armed and disarmed by entering a password using a keypad. When
 
 ## System Components:
 
-The project consists of three files:
-
 - FRDM-KL05Z microcontroller
 - HC-SR04P ultrasonic distance sensor
 - HW-834 matrix keypad
