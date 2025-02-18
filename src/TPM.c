@@ -30,7 +30,7 @@ void InCap_OutComp_Init()
 	PTB->PDDR |= (1<<11);					// PTB11 - output
 	PTB->PCOR = (1<<11);
 	
-    // TPM1 configuration
+        // TPM1 configuration
 	SIM->SCGC6 |= SIM_SCGC6_TPM1_MASK;		// Enable clock signal for TPM1 module
 	SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1);		// Select TPMx clock source MCGFLLCLK=41943040Hz
 	
@@ -43,7 +43,7 @@ void InCap_OutComp_Init()
 	TPM1->SC |= TPM_SC_TOIE_MASK;			// Enable OVERFLOW interrupt for TPM1
 	NVIC_SetPriority(TPM1_IRQn,2);
 	NVIC_ClearPendingIRQ(TPM1_IRQn);
-    NVIC_EnableIRQ(TPM1_IRQn);
+        NVIC_EnableIRQ(TPM1_IRQn);
 	
 	TPM1->SC |= TPM_SC_CMOD(1);		// Enable TPM1
 }
